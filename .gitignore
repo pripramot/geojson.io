@@ -1,3 +1,7 @@
 /node_modules
 .DS_Store
 /dist
+# Python
+__pycache__/
+*.pyc
+*.pyo
