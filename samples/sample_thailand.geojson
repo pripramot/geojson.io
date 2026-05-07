@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [100.5018, 13.7563]
+      },
+      "properties": {
+        "name": "กรุงเทพมหานคร",
+        "category": "capital",
+        "province": "กรุงเทพมหานคร"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [98.9853, 18.7883]
+      },
+      "properties": {
+        "name": "เชียงใหม่",
+        "category": "city",
+        "province": "เชียงใหม่"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [98.3381, 7.8804]
+      },
+      "properties": {
+        "name": "ภูเก็ต",
+        "category": "city",
+        "province": "ภูเก็ต"
+      }
+    }
+  ]
+}

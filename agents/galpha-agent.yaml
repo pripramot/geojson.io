@@ -1,0 +1,35 @@
+name: galpha-agent
+version: 0.1.0
+language: th
+description: |
+  เอเจนต์ช่วยวิเคราะห์และตรวจสอบข้อมูล GeoJSON/Field Data
+  สำหรับงาน OSINT และนิเวศวิทยาไทย
+  ตรวจสอบ anomaly, ข้อมูลขาดหาย, แปลงฟอร์แมต พร้อมสรุปผลแบบอัตโนมัติ
+secrets:
+  - MAPBOX_TOKEN
+  - GBIF_TOKEN
+  - SERPAPI_API_KEY
+tools:
+  - name: geojson_validate
+    type: python
+    entry_point: agents/galpha_agent_tools.py:geojson_validate
+    description: "ตรวจสอบ แปลง และวิเคราะห์ GeoJSON"
+output_schema:
+  type: object
+  properties:
+    summary:
+      type: string
+      description: "สรุปวิเคราะห์ภาษาไทย"
+    geojson:
+      type: object
+    anomalies:
+      type: array
+      items:
+        type: object
+    map_actions:
+      type: array
+      items:
+        type: object
+  required:
+    - summary
+    - geojson
